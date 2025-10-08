@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'scriptin';
+  src: url('fonts/SCRIPTIN.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cute';
+  src: url('fonts/Cute Notes.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'plant';
+  src: url('fonts/Plante.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'tokyo';
+  src: url('fonts/Tokyo.ttf') format('truetype');
+}
+
+body {
+  background-color: rebeccapurple;
+}
+
+.loc{
+    position:relative; 
+    text-align:right; 
+    width:500px; 
+    height:450px;
+}
+
+.loc .map{
+    overflow:hidden;
+    background:none;
+    width:500px; 
+    height:450px;
+}
+
+.loc .map iframe{
+    border:0;
+    width:100%;
+    height:100%
+}
+
+.prev{
+    display:inline-block; 
+    transform: rotate(180deg);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Georgia", serif;
+  background-color: #f9f9f6;
+  color: #1c1c1c;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: plant;
+  font-weight: 500;
+  margin: 1.5rem 0 0.8rem;
+  letter-spacing: 1px;
+}
+
+h1{
+    font-size: 2.2rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.header {
+  display: grid;
+  grid-template-columns: 4fr 4fr 2fr;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.links{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 3rem;
+    
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 2px;
+  font-family: scriptin;
+}
+
+.links button {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 0 0.8rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease-in;
+  font-family:'cute';
+  font-size: 2rem;
+}
+
+
+.links button:hover {
+  color: #a18144; 
+  background: #8b6d38;
+}
+
+.insta {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.insta:hover {
+  opacity: 1;
+}
+
+
+#content {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.local {
+  margin: 1rem auto 2rem;
+  width: 160px;
+  display: block;
+}
+
+
+
+
+.loc {
+  margin: 2rem auto;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  height: 450px;
+}
+
+.loc .map {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.loc .map iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slide {
+  margin: 3rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+.curr img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.prev, .next {
+  position: absolute;
+  z-index: 999;
+  top: 67%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.5s ease 0.1s;
+}
+
+.prev {
+  left: 32%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.next {
+  right: 32%;
+  transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+  background: #fff;
+}
+
+.footer{
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.copytext{
+    color:black;
+    font-family: scriptin;
+    font-size: 1.25rem;
+    transition: color 2s ease;
+}
+
+.copytext.dark{
+    color: white;
+}
+
+.github{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    object-fit: cover;       
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0px;
+    
+    
+}
+.github img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 1.75s ease;
+  flex-shrink:0;
+}
+.github img:hover{
+    transform: scale(1.2) rotate(180deg);
+    transition: transform 0.3s ease-in, transform 2.5s ease-out;
+}
